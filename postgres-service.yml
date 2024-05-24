@@ -9,6 +9,9 @@ spec:
   ports:
   - port: 5432
     targetPort: 5432
+  environment:
+    POSTGRES_USER: "postgres"
+    POSTGRES_PASSWORD: "postgres"
   selector:
     name: postgres-pod
     app: demo-voting-app
